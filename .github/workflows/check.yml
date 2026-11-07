@@ -8,6 +8,8 @@ name: VPN Gate Node Check
 #     - cron: '*/30 * * * *'
 
 on:
+  schedule:
+    - cron: '0 0,12 * * *'   # 每天 UTC 0 点和 12 点 = 北京时间早 8 点和晚 20 点
   workflow_dispatch:
     inputs:
       max_nodes:
